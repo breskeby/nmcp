@@ -24,8 +24,6 @@ internal abstract class DefaultNmcpExtension(private val project: Project): Nmcp
         project.configurations.create(nmcpProducerConfigurationName) {
             it.isCanBeConsumed = true
             it.isCanBeResolved = false
-            // See https://github.com/GradleUp/nmcp/issues/2
-            it.isVisible = false
 
             it.configureAttributes(project)
         }
